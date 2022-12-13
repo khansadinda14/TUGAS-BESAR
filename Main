@@ -1,0 +1,50 @@
+package Bioskop;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Main {
+    public static void  main(String[] args)throws IOException{
+        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+
+        System.out.println("Masukan Judul film yang ngin kamu tonton: ");
+        String judul = br.readLine();
+        System.out.println("Masukkan Kategori film: ");
+        String kategori = br.readLine();
+        System.out.println("Masukkan deskripsi film: ");
+        String deskripsi = br.readLine();
+
+        System.out.println("Masukkan Tanggal: ");
+        String tanggal = br.readLine();
+        System.out.println("Masukkan Hari: ");
+        String hari = br.readLine();
+        System.out.println("Masukkan Jam: ");
+        String jam = br.readLine();
+
+        System.out.println("Masukkan nama ruang Studio: ");
+        String namastudio = br.readLine();
+        System.out.println("Masukkan Kapasitas studio: ");
+        int kapasitas = Integer.parseInt(br.readLine());
+
+
+        jadwal jadwal1 =new jadwal(tanggal, hari, jam, new RuangStudio(namastudio,kapasitas));
+        Movie movie1 = new Movie(judul, kategori, deskripsi, jadwal1);
+
+        System.out.println("Masukkan nama pembeli: ");
+        String nama = br.readLine();
+        System.out.println("Masukkan Umur: ");
+        int umur = Integer.parseInt(br.readLine());
+        System.out.println("Masukkan email pembeli: ");
+        String email = br.readLine();
+
+        TiketBioskop tiket001 = new TiketBioskop(nama, umur, email);
+
+        tiket001.beliTiket(movie1);
+
+        tiket001.detailTiket();
+        tiket001.detailpembeli();
+
+        System.out.println("menghapus tiket 0");
+        tiket001.hapusTiket(0);
+    }
+}
