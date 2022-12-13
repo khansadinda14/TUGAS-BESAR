@@ -1,0 +1,49 @@
+package Bioskop;
+
+public class Movie {
+    public String judul;
+    public String kategori_film;
+    public String deskrisp_film;
+    public jadwal jadwal;
+
+    public Movie(String judul, String kategori_film, String deskrisp_film, jadwal jadwal){
+        this.judul = judul;
+        this.kategori_film = kategori_film;
+        this.deskrisp_film = deskrisp_film;
+        this.jadwal = jadwal;
+    }
+
+    public void infomovie(){
+        System.out.println();
+        System.out.println("*******INFO TIKET YANG ANDA BELI*******");
+        System.out.println("judul : " + this.getjudul());
+        System.out.println("kategori film "+ this.getkategori_film());
+        System.out.println("deskripsi film : "+ this.getdeskrisp_film());
+        this.jadwal.infojadwal();
+        System.out.println("***************************************");
+    }
+    public String getjudul(){
+        return judul;
+    }
+    public void setJudul(String judul){
+        this.judul = judul;
+    }
+    public String getkategori_film(){
+        return kategori_film;
+    }
+    public void setKategori_film(String kategori_film){
+        this.kategori_film = kategori_film;
+    }
+    public String getdeskrisp_film(){
+        return deskrisp_film;
+    }
+    public void setDeskrisp_film(String deskrisp_film){
+        this.deskrisp_film = deskrisp_film;
+    }
+    public Bioskop.jadwal getJadwal(){
+        return jadwal;
+    }
+    public void setjadwal(String Jadwal){
+        this.jadwal = jadwal;
+    }
+}
