@@ -1,0 +1,41 @@
+package Bioskop;
+
+public class jadwal {
+    public String tanggal;
+    public String hari;
+    public String jam;
+    public RuangStudio ruangStudio;
+
+    public jadwal(String tanggal, String hari, String jam, RuangStudio ruangStudio){
+        this.tanggal = tanggal;
+        this.hari = hari;
+        this.jam = jam;
+        this.ruangStudio = ruangStudio;
+    }
+
+    public void infojadwal(){
+        System.out.println("Tanggal : " + getTanggal());
+        System.out.println("Hari : " + getHari());
+        System.out.println("Jam : " + getJam());
+        this.ruangStudio.infoRuangStudio();
+    }
+    public String getTanggal(){
+        return  tanggal;
+    }
+    public void setTanggal(String Tanggal){
+        this.tanggal = tanggal;
+    }
+    public String getHari(){
+        return hari;
+    }
+    public void setHari(String Hari){
+        this.hari = hari;
+    }
+    public String getJam(){
+        return jam;
+    }
+    public void setJam(String Jam){
+        this.jam = jam;
+    }
+
+}
