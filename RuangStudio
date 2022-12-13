@@ -1,0 +1,37 @@
+package Bioskop;
+
+public class RuangStudio {
+    public String namastudio;
+    public boolean penuh;
+    public int kapasitas;
+
+    public RuangStudio(String namastudio, int kapasitas){
+        this.namastudio = namastudio;
+        this.penuh = penuh;
+        this.kapasitas = kapasitas;
+    }
+
+    public void infoRuangStudio(){
+        String statuskapasitas = this.penuh ? "Penuh" : "Kosong";
+        System.out.println("Nama Studio : " + this.getNamaStudio());
+        System.out.println("Apakah Studio masih tersedai :" + statuskapasitas);
+    }
+    public String getNamaStudio(){
+        return namastudio;
+    }
+    public void setNamastudio(String namastudio){
+        this.namastudio = namastudio;
+    }
+    public boolean isPenuh(){
+        return penuh;
+    }
+    public void setPenuh(boolean penuh){
+        this.penuh = penuh;
+    }
+    public int getKapasitas(){
+        return kapasitas;
+    }
+    public void setKapasitas(int kapasitas){
+        this.kapasitas = kapasitas;
+    }
+}
